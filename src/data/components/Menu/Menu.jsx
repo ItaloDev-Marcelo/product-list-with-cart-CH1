@@ -3,10 +3,11 @@ import cake from '../images/illustration-empty-cart.svg';
 import { useContext } from 'react'
 import { GobalContext } from '../../../context';
 
+//test
 
 export default function MenuOrder() {
 
-     const {dt, setdt} = useContext(GobalContext);
+     const {dt} = useContext(GobalContext);
 
     
      const litte = dt.filter(item => item.openState === true).
