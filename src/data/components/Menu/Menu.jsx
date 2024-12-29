@@ -8,7 +8,6 @@ import { GobalContext } from '../../../context';
 export default function MenuOrder() {
 
      const {dt} = useContext(GobalContext);
-
     
      const litte = dt.filter(item => item.openState === true).
      filter(item => item.valor >  0).map(item => item.valor).reduce((num,sum) => {
@@ -17,8 +16,6 @@ export default function MenuOrder() {
 
      console.log(litte) 
      
-    
-   
  
     return (
         <article id="Menu">
