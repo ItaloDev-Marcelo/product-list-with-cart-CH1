@@ -5,6 +5,7 @@
        "id": 1,
        "valor": 0,
        "openState": false,
+       "totalOfthisplate": 0,
        "image": {
             "thumbnail": "src/assets/images/image-waffle-thumbnail.jpg",
             "mobile": "src/assets/images/image-waffle-mobile.jpg",
@@ -19,6 +20,7 @@
         "id": 2,
         "valor": 0,
         "openState": false,
+        "totalOfthisplate": 0,
         "image": {
             "thumbnail": "src/assets/images/image-creme-brulee-thumbnail.jpg",
             "mobile": "src/assets/images/image-creme-brulee-mobile.jpg",
@@ -33,6 +35,7 @@
         "id": 3,
         "valor": 0,
         "openState": false,
+        "totalOfthisplate": 0,
         "image": {
             "thumbnail": "src/assets/images/image-macaron-thumbnail.jpg",
             "mobile": "src/assets/images/image-macaron-mobile.jpg",
@@ -47,6 +50,7 @@
         "id": 4,
         "valor": 0,
         "openState": false,
+        "totalOfthisplate": 0,
         "image": {
             "thumbnail": "src/assets/images/image-tiramisu-thumbnail.jpg",
             "mobile": "src/assets/images/image-tiramisu-mobile.jpg",
@@ -61,6 +65,7 @@
         "id": 5,
         "valor": 0,
         "openState": false,
+        "totalOfthisplate": 0,
         "image": {
             "thumbnail": "src/assets/images/image-baklava-thumbnail.jpg",
             "mobile": "src/assets/images/image-baklava-mobile.jpg",
@@ -75,6 +80,7 @@
         "id": 6,
         "valor": 0,
         "openState": false,
+        "totalOfthisplate": 0,
         "image": {
             "thumbnail": "src/assets/images/image-meringue-thumbnail.jpg",
             "mobile": "src/assets/images/image-meringue-mobile.jpg",
@@ -89,6 +95,7 @@
         "id": 7,
         "valor": 0,
         "openState": false,
+        "totalOfthisplate": 0,
         "image": {
             "thumbnail": "src/assets/images/image-cake-thumbnail.jpg",
             "mobile": "src/assets/images/image-cake-mobile.jpg",
@@ -103,6 +110,7 @@
         "id": 8,
         "valor": 0,
         "openState": false,
+        "totalOfthisplate": 0,
         "image": {
             "thumbnail": "src/assets/images/image-brownie-thumbnail.jpg",
             "mobile": "src/assets/images/image-brownie-mobile.jpg",
@@ -117,6 +125,7 @@
         "id": 9,
         "valor": 0,
         "openState": false,
+        "totalOfthisplate": 0,
         "image": {
             "thumbnail": "src/assets/images/image-panna-cotta-thumbnail.jpg",
             "mobile": "src/assets/images/image-panna-cotta-mobile.jpg",

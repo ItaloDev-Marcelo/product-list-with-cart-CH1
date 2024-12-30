@@ -10,7 +10,7 @@ function GlobalState({children}) {
 
 
     const [dt, setDt] = useState(data)
-    const [totalBill, setTotalBill] = useState(0)
+    const [totalBill, setTotalBill] = useState()
 
      // ativa e desativa menu de order
   const  checkId = (myId) => {
@@ -46,11 +46,12 @@ const RemovePlate = (myId) => {
       item.id === myId ? {...item, valor: 0, openState: false} : item
    )
   ) 
-  
 } 
 
 
-    return  <GobalContext.Provider value={{dt, hundleDown, hundleUp, checkId, RemovePlate }} >{children}</GobalContext.Provider>
+
+    return  <GobalContext.Provider value={{dt, hundleDown, hundleUp,
+       checkId, RemovePlate, totalBill, setTotalBill}} >{children}</GobalContext.Provider>
 }
 
 

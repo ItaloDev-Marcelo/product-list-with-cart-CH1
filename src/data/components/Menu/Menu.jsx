@@ -22,7 +22,12 @@ export default function MenuOrder() {
       const {name,valor,price, id} = data;
       return <Order key={id} name={name} valor={valor} price={price} id={id}/>
    })
-     
+
+   console.log( responseData)
+
+   
+ 
+
  
     return (
         <>
