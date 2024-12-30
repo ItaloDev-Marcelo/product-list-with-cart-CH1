@@ -1,5 +1,5 @@
 import cake from '../images/illustration-empty-cart.svg';
-
+import Order from './order';
 import { useContext } from 'react'
 import { GobalContext } from '../../../context';
 
@@ -14,18 +14,34 @@ export default function MenuOrder() {
       return num + sum
      }, 0) 
 
-     console.log(litte) 
+     const responseData = dt.filter(item => item.openState === true &&  item.valor >  0)
+
+
+     const filterObj =  responseData.map(data => 
+      {
+      const {name,valor,price} = data;
+      return <Order name={name} valor={valor} price={price}/>
+   })
      
  
     return (
+        <>
         <article id="Menu">
            <div>
            <h3 id="menu-title">You Cart ({litte}) </h3>
-           <div id="order-image-empty">
-              <img src={cake} alt='' />
-           </div>
-           <p id="information-card">Your added items will appear here</p>
+           {
+            responseData <= 0 ? <>
+            <div id="order-image-empty">
+               <img src={cake} alt='' />
+            </div>
+            <p id="information-card">Your added items will appear here</p>
+            </> : filterObj
+           }
+           
            </div>
         </article>
+
+       
+        </>
     )
 }

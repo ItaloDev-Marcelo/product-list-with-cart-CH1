@@ -10,6 +10,7 @@ function GlobalState({children}) {
 
 
     const [dt, setDt] = useState(data)
+    const [totalBill, setTotalBill] = useState(0)
 
      // ativa e desativa menu de order
   const  checkId = (myId) => {
