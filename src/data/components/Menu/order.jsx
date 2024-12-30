@@ -1,9 +1,15 @@
 import deleteIcon from '../images/icon-remove-item.svg';
 
-export default function Order({name, valor, price}) {
+
+import { useContext } from 'react'
+import { GobalContext } from '../../../context';
+
+export default function Order({name, valor, price, id, key}) {
+
   const total1 = valor * price; 
+  const {RemovePlate} = useContext(GobalContext)
     return (
-        <article>
+        <article key={key}>
           <div>
              <h4 className='plate-name'>{name}</h4>
              <div className='price-information'>
@@ -12,7 +18,7 @@ export default function Order({name, valor, price}) {
                 <span className='update-Value'>{total1.toFixed(2)}</span> </p>
              </div>
           </div>
-          <button className='delete-btn'><img src={deleteIcon} alt=''/></button>
+          <button className='delete-btn' onClick={() => RemovePlate(id)}><img src={deleteIcon} alt=''/></button>
         </article>
     ) 
 }

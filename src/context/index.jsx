@@ -16,7 +16,7 @@ function GlobalState({children}) {
   const  checkId = (myId) => {
     setDt(prevState => 
       prevState.map(item =>
-        item.id === myId ? {...item, openState: !item.openState} : item
+        item.id === myId ? {...item, openState: true} : item
      )
     )    
 }
@@ -38,7 +38,19 @@ const hundleDown  = (myId) => {
    )
   )   
 }
-    return  <GobalContext.Provider value={{dt, hundleDown, hundleUp, checkId}} >{children}</GobalContext.Provider>
+
+// remover e corrigir
+const RemovePlate = (myId) => {
+  setDt(prevState => 
+    prevState.map(item =>
+      item.id === myId ? {...item, valor: 0, openState: false} : item
+   )
+  ) 
+  
+} 
+
+
+    return  <GobalContext.Provider value={{dt, hundleDown, hundleUp, checkId, RemovePlate }} >{children}</GobalContext.Provider>
 }
 
 

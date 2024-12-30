@@ -19,8 +19,8 @@ export default function MenuOrder() {
 
      const filterObj =  responseData.map(data => 
       {
-      const {name,valor,price} = data;
-      return <Order name={name} valor={valor} price={price}/>
+      const {name,valor,price, id} = data;
+      return <Order key={id} name={name} valor={valor} price={price} id={id}/>
    })
      
  

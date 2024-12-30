@@ -3,13 +3,12 @@ import addToCart from './images/icon-increment-quantity.svg';
 import removeToCart from './images/icon-decrement-quantity.svg';
 
 
-import { useContext } from 'react'
+import { useContext} from 'react'
 import { GobalContext } from '../../context';
 
 export default function CartItem({image,name,category,price, id, valor, openState}) {
 
-   
- 
+  
   const {checkId, hundleUp, hundleDown} = useContext(GobalContext)
     
 
