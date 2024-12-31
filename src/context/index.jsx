@@ -7,14 +7,13 @@ export const GobalContext = createContext(null);
 
 function GlobalState({children}) {
 
+// json file state 
+  
+const [objData, setObjData] = useState(data)
 
-
-    const [dt, setDt] = useState(data)
-    const [totalBill, setTotalBill] = useState()
-
-     // ativa e desativa menu de order
+// ativa e desativa menu de order
   const  checkId = (myId) => {
-    setDt(prevState => 
+    setObjData(prevState => 
       prevState.map(item =>
         item.id === myId ? {...item, openState: true} : item
      )
@@ -23,35 +22,59 @@ function GlobalState({children}) {
 
 // incrementar o valor em +1
 const hundleUp  = (myId) => {
-  setDt(prevState => 
+  
+  setObjData(prevState => 
     prevState.map(item =>
       item.id === myId ? {...item, valor: item.valor + 1} : item
    )
   )   
+
+  // update totalOfthisPlate
+  setObjData(prevState => 
+    prevState.map(item => (
+        item.valor > 0 ? {...item, totalOfthisplate: (item.valor * item.price)} : item
+    ))
+  )
 }
 
  // dencrementar o valor em -1
 const hundleDown  = (myId) => {
-  setDt(prevState => 
+  setObjData(prevState => 
     prevState.map(item =>
       item.id === myId ? {...item, valor: item.valor - 1} : item
    )
-  )   
+  )  
+  
+  // update totalOfthisPlate
+  setObjData(prevState => 
+    prevState.map(item => (
+        item.valor <= 1 ? {...item, totalOfthisplate: (item.totalOfthisplate -  item.price )} : item
+    ))
+  )
 }
 
 // remover e corrigir
 const RemovePlate = (myId) => {
-  setDt(prevState => 
+  setObjData(prevState => 
     prevState.map(item =>
       item.id === myId ? {...item, valor: 0, openState: false} : item
    )
   ) 
+
+  // update totalOfthisPlate
+
+  setObjData(prevState => 
+    prevState.map(item => (
+        item.valor <= 1 ? {...item, totalOfthisplate:0} : item
+    ))
+  )
 } 
 
 
 
-    return  <GobalContext.Provider value={{dt, hundleDown, hundleUp,
-       checkId, RemovePlate, totalBill, setTotalBill}} >{children}</GobalContext.Provider>
+    return (
+       <GobalContext.Provider value={{objData, hundleDown, hundleUp,
+      checkId, RemovePlate, setObjData}} >{children}</GobalContext.Provider>) 
 }
 
 

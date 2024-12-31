@@ -1,8 +1,6 @@
 import cart from './images/icon-add-to-cart.svg';
 import addToCart from './images/icon-increment-quantity.svg';
 import removeToCart from './images/icon-decrement-quantity.svg';
-
-
 import { useContext} from 'react'
 import { GobalContext } from '../../context';
 

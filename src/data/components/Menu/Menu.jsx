@@ -7,46 +7,61 @@ import { GobalContext } from '../../../context';
 
 export default function MenuOrder() {
 
-     const {dt} = useContext(GobalContext);
+     // global state
+     const {objData} = useContext(GobalContext);
     
-     const litte = dt.filter(item => item.openState === true).
+     // filter number of items
+     const numOfItensinCart = objData.filter(item => item.openState === true).
      filter(item => item.valor >  0).map(item => item.valor).reduce((num,sum) => {
       return num + sum
      }, 0) 
 
-     const responseData = dt.filter(item => item.openState === true &&  item.valor >  0)
+     // check openstate and valor
+     const responseData = objData.filter(item => item.openState === true &&  item.valor >  0)
+     
+
+     // total price of order
+     const totalOrderPrice = objData.filter(item => item.totalOfthisplate > 0)
+     .map(item => item.totalOfthisplate) 
+     .reduce((num,sum) => {
+      return num + sum
+     }, 0) 
 
 
-     const filterObj =  responseData.map(data => 
+     // order map itens 
+     const filterOrder =  responseData.map(data => 
       {
       const {name,valor,price, id} = data;
-      return <Order key={id} name={name} valor={valor} price={price} id={id}/>
+      return (
+         <>
+         <Order key={data.id} name={name} valor={valor} price={price} id={id}/>
+         </>
+      ) 
    })
 
-   console.log( responseData)
+  
 
-   
- 
-
- 
     return (
         <>
         <article id="Menu">
            <div>
-           <h3 id="menu-title">You Cart ({litte}) </h3>
+           <h3 id="menu-title">You Cart ({numOfItensinCart}) </h3>
            {
             responseData <= 0 ? <>
             <div id="order-image-empty">
                <img src={cake} alt='' />
             </div>
             <p id="information-card">Your added items will appear here</p>
-            </> : filterObj
+            </> : (<>
+               { filterOrder }  <div className='confirm-order'>
+           <h4> Order Total $ {totalOrderPrice}</h4>
+           <button >Confirm Order</button>
+         </div>
+            </>)
            }
            
            </div>
         </article>
-
-       
         </>
     )
 }
