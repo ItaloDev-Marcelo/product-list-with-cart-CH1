@@ -11,6 +11,7 @@ function App() {
 
   return (
     <>
+    <div id="Grid-C">
     {
       objData.map(dataItem => {
         /*destructor in an object*/ 
@@ -22,6 +23,7 @@ function App() {
          ) 
       })
     }
+    </div>
     <MenuOrder/>
     </>
   )
