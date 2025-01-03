@@ -44,6 +44,12 @@ const hundleDown  = (myId) => {
       item.id === myId ? {...item, valor: item.valor - 1} : item
    )
   )  
+
+  setObjData(prevState => 
+    prevState.map(item =>
+      item.id === myId && item.valor <= 0 ?  {...item, openState: false, valor: 0} : item   
+   )
+  )  
   
   // update totalOfthisPlate
   setObjData(prevState => 

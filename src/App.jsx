@@ -10,7 +10,8 @@ function App() {
   
 
   return (
-    <>
+    <main>
+    <h1>Desserts</h1>
     <div id="Grid-C">
     {
       objData.map(dataItem => {
@@ -25,7 +26,7 @@ function App() {
     }
     </div>
     <MenuOrder/>
-    </>
+    </main>
   )
 }
 

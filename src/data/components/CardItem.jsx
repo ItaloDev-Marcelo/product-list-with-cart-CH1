@@ -16,23 +16,19 @@ export default function CartItem({image,name,category,price, id, valor, openStat
               <img src={image} alt="" />
            <div>
 
-           <div className='float-center'>
-            {
-              !openState && valor === 0 ? <button className="btn-order" onClick={() => checkId(id) }> <img src={cart} alt="" /> <span className='txt-space'>Add to cart</span> </button>
-              : null
-            }
-           
+           <div className='float-center'>   
           <div className="btn-row-order">
            
           {
              openState   ?
              <>
              <button className="Add-to-cart btn" onClick={() =>  hundleUp(id)}> <img src={addToCart} alt="" /></button>
-             <button className="btn">{valor  < 0 ? 0 : valor }</button>
+             <button className="btn">{valor}</button>
 
              <button className="remove-to-cart btn" onClick={() =>  hundleDown(id)}><img src={removeToCart} alt="" /></button>
              </>
-             : null
+             : <button className="btn-order" onClick={() => checkId(id) }> <img src={cart} alt="" /> <span className='txt-space'>Add to cart</span> </button>
+              
           }
           </div>
           
@@ -40,8 +36,8 @@ export default function CartItem({image,name,category,price, id, valor, openStat
            
           </div>
           </div>
-          <section id="information-area">
-            <h1 className="title">{category}</h1>
+          <section className="information-area">
+            <h2 className="title">{category}</h2>
             <h2 className="plateInformation">{name}</h2>
             <h2 className="price">${price}</h2>
           </section>
