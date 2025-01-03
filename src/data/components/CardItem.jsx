@@ -14,24 +14,30 @@ export default function CartItem({image,name,category,price, id, valor, openStat
         <article className="order--item"  >
           <div className="order--image">
               <img src={image} alt="" />
-              <div>
+           <div>
+
            <div className='float-center'>
-           <button className="btn-order" onClick={() => checkId(id) }> <img src={cart} alt="" /> Add to cart</button>
+            {
+              !openState && valor === 0 ? <button className="btn-order" onClick={() => checkId(id) }> <img src={cart} alt="" /> <span className='txt-space'>Add to cart</span> </button>
+              : null
+            }
+           
           <div className="btn-row-order">
            
           {
-             openState ?
+             openState   ?
              <>
-             <button className="Add-to-cart" onClick={() =>  hundleUp(id)}> <img src={addToCart} alt="" /></button>
-             <button>{valor  < 0 ? 0 : valor }</button>
-            
-             <button className="remove-to-cart" onClick={() =>  hundleDown(id)}><img src={removeToCart} alt="" /></button>
+             <button className="Add-to-cart btn" onClick={() =>  hundleUp(id)}> <img src={addToCart} alt="" /></button>
+             <button className="btn">{valor  < 0 ? 0 : valor }</button>
+
+             <button className="remove-to-cart btn" onClick={() =>  hundleDown(id)}><img src={removeToCart} alt="" /></button>
              </>
              : null
           }
           </div>
           
            </div>
+           
           </div>
           </div>
           <section id="information-area">

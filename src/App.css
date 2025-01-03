@@ -24,6 +24,10 @@ body {
   font-family: "Red Hat Text", serif;
 }
 
+button {
+  border: none;
+}
+
 #Grid-C {
   display: grid;
 }
@@ -48,7 +52,34 @@ body {
 }
 
 .btn-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   height: 45px;
   border-radius: 25px;
+}
+
+.btn-order .txt-space {
+  padding-left: 1em;
+}
+
+.btn {
+  border: none;
+  width: 50px;
+  height: 45px;
+}
+
+.btn-row-order {
+  border-radius: 25px;
+}
+
+.Add-to-cart  {
+  border-top-left-radius:25px ;
+  border-bottom-left-radius: 25px;
+}
+
+.remove-to-cart {
+  border-top-right-radius: 25px ;
+  border-bottom-right-radius: 25px;
 }
