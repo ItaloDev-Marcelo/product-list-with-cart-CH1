@@ -22,10 +22,12 @@
 body {
   font-size: 1em;
   font-family: "Red Hat Text", serif;
+  background-color: var(--Rose-100);
 }
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 main {
@@ -49,17 +51,26 @@ h1 {
 
 .order--item {
   width: 324px;
-  height:320px;
+  height:325px;
 }
 
 .order--image {
   position: relative;
 }
 
+.order--image.active {
+  position: relative;
+  border:2px solid red;
+  border-radius: 11px;
+  height: 211px;
+}
+
+
 .order--item > .order--image img {
   max-width: 100%;
   border-radius: 10px;
 }
+
 
 .float-center { 
   position: absolute;
@@ -71,9 +82,12 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   width: 150px;
   height: 45px;
   border-radius: 25px;
+  background-color: var(--Rose-50);
+  border: 1px solid gray;
 }
 
 .btn-order .txt-space {
@@ -86,16 +100,39 @@ h1 {
   height: 45px;
 }
 
+.bnt1 {
+  cursor: auto;
+}
+
+.bnt1, .Add-to-cart, .remove-to-cart {
+  position: relative;
+  background-color: var(--Red);  
+  color: var(--Rose-50);
+}
+
 .btn-row-order {
   border-radius: 25px;
 }
 
-.Add-to-cart  {
+.cirlce {
+  width: 20px;
+  align-self: center;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  margin-left: 1.1em;
+}
+
+.remove-to-cart .cirlce img {
+  position: relative;
+  top: -.25em;
+}
+
+.remove-to-cart  {
   border-top-left-radius:25px ;
   border-bottom-left-radius: 25px;
 }
 
-.remove-to-cart {
+.Add-to-cart {
   border-top-right-radius: 25px ;
   border-bottom-right-radius: 25px;
 }
@@ -105,5 +142,90 @@ h1 {
 }
 
 .information-area .title {
-  font-weight: 400;
+  font-weight: 500;
+  color: var(--Rose-300);
+  margin-bottom: .4em;
+}
+
+.information-area .plateInformation {
+  color: var(--Rose-900);
+}
+
+.information-area .price {
+   color: var(--Red);
+   font-size: 1.1em;
+   margin-top: .2em;
+}
+
+
+#Menu {
+  width: 324px;
+  height: 250px;
+  padding: 2em;
+  background-color: #fff;
+  margin-bottom: 2em;
+}
+
+#center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-title {
+  color: var(--Red);
+  letter-spacing: 2px;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+}
+
+.plate-name {
+  margin-bottom: 1em;
+}
+
+.price-information, .fix-price {
+  display: flex;
+}
+
+.price-information .timesOrder {
+  margin-right: 1em;
+}
+
+.fix-space {
+  margin: 0 .5em;
+}
+
+.delete-btn {
+  background-color: transparent;
+}
+
+.delete-btn > .delete-circle {
+  border: 1px solid gray;
+  width: 20px;
+  height: 20px;
+  border-radius: 22px;
+}
+
+.delete-circle > img {
+  align-self: center;
+}
+
+.order-s {
+  margin-top: .5em;
+}
+
+hr {
+  margin-top: -10px;
+  border: #7e666444 1px solid;
+}
+
+#not-show {
+  display: none;
 }

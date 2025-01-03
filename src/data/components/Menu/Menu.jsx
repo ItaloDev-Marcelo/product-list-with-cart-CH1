@@ -45,19 +45,22 @@ export default function MenuOrder() {
         <>
         <article id="Menu">
            <div>
-           <h3 id="menu-title">You Cart ({numOfItensinCart}) </h3>
+           <h3 id="menu-title">Your Cart ({numOfItensinCart}) </h3>
            {
             responseData <= 0 ? <>
-            <div id="order-image-empty">
+           
+           <div id='center-content'>
+           <div id="order-image-empty">
                <img src={cake} alt='' />
             </div>
             <p id="information-card">Your added items will appear here</p>
-            </> : (<>
-               { filterOrder }  <div className='confirm-order'>
+           </div>
+            </> : (<div >
+               { filterOrder }  <div id='not-show' className='confirm-order'>
            <h4> Order Total $ {totalOrderPrice}</h4>
            <button >Confirm Order</button>
          </div>
-            </>)
+            </div>)
            }
            
            </div>

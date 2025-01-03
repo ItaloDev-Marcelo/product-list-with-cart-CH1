@@ -12,7 +12,7 @@ export default function CartItem({image,name,category,price, id, valor, openStat
 
     return (
         <article className="order--item"  >
-          <div className="order--image">
+          <div className={openState ? 'order--image active' : 'order--image'}>
               <img src={image} alt="" />
            <div>
 
@@ -21,12 +21,26 @@ export default function CartItem({image,name,category,price, id, valor, openStat
            
           {
              openState   ?
-             <>
-             <button className="Add-to-cart btn" onClick={() =>  hundleUp(id)}> <img src={addToCart} alt="" /></button>
-             <button className="btn">{valor}</button>
+             <div className='orange'>
+             
+            
+             <button className="remove-to-cart btn" onClick={() =>  hundleDown(id)}>
 
-             <button className="remove-to-cart btn" onClick={() =>  hundleDown(id)}><img src={removeToCart} alt="" /></button>
-             </>
+             <div className='cirlce'>
+              <img src={removeToCart} alt="" />
+             </div> 
+
+              </button>
+
+              <button className="btn bnt1">{valor}</button>
+
+
+              <button className="Add-to-cart btn" onClick={() =>  hundleUp(id)}>
+               <div className='cirlce'>
+               <img src={addToCart} alt="" />
+               </div>
+              </button>
+             </div>
              : <button className="btn-order" onClick={() => checkId(id) }> <img src={cart} alt="" /> <span className='txt-space'>Add to cart</span> </button>
               
           }
