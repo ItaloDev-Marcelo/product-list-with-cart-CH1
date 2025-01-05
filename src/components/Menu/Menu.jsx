@@ -1,4 +1,5 @@
 import cake from '../images/illustration-empty-cart.svg';
+import Carbon from '../images/icon-carbon-neutral.svg';
 import Order from './order';
 import { useContext } from 'react'
 import { GlobalContext } from '../../context';
@@ -54,8 +55,16 @@ export default function MenuOrder() {
            </div>
             </> : (<div >
                { filterOrder }  <div id='not-show' className='confirm-order'>
-           <h4> Order Total $ {totalOrderPrice}</h4>
-           <button >Confirm Order</button>
+           <div className='row'>
+           <h4> Order Total</h4>
+           <h4 className='product-price'>$ {totalOrderPrice.toFixed(2)}</h4>
+           </div>
+           <div className='carbon-row'>
+              <img src={Carbon} alt='tree' />
+              <h4 id="carbon-txt">This is a <strong>carbon-neutral</strong> delivery </h4>
+           </div>
+           <button id="submit-form">Confirm Order</button>
+
          </div>
             </div>)
            }  

@@ -115,8 +115,6 @@ h1 {
   border-radius: 25px;
 }
 
-
-
 .cirlce {
   width: 20px;
   align-self: center;
@@ -194,8 +192,10 @@ h1 {
 }
 
 .plate-name {
-  font-weight: 500;
-  margin-bottom: 1em;
+  font-weight: 600;
+  color: var(--Rose-900);
+  opacity: .9;
+  margin: .5em 0;
 }
 
 .price-information, .fix-price {
@@ -203,11 +203,14 @@ h1 {
 }
 
 .price-information .timesOrder {
-  margin-right: 1em;
+  margin-right: .5em;
+  color: var(--Red);
+  font-weight: 700;
 }
 
 .fix-space {
   margin: 0 .5em;
+  color: var(--Rose-400);
 }
 
 .delete-btn {
@@ -221,8 +224,19 @@ h1 {
   border-radius: 22px;
 }
 
+.update-Value {
+  color: var(--Rose-500);
+  font-weight: 500;
+}
+
 .delete-circle > img {
   align-self: center;
+  position: relative;
+  top: 1px;
+}
+
+.delete-circle:hover {
+  border: 1px solid #000;
 }
 
 .order-s {
@@ -230,14 +244,47 @@ h1 {
 }
 
 hr {
-  margin-top: -10px;
+  margin-top: -1px;
   border: #7e666444 1px solid;
 }
 
 #not-show {
-  display: none;
+  margin-top: 1.5em;
 }
 
+#not-show > .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 1.7em;
+}
+
+.carbon-row {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  border-radius: 7px;
+  padding: .9em 1em;
+  font-size: .9em;
+  margin: 1.4em 0;
+  background-color: var(--Rose-50);
+}
+
+#carbon-txt {
+  font-weight: 500;
+}
+
+#submit-form {
+  width: 265px;
+  height: 45px;
+  border-radius: 25px;
+  background: var(--Red);
+  color: #fff;
+  font-weight: 700;
+}
 /*mobile*/
 
 @media (min-width:601px)  {
@@ -328,7 +375,7 @@ hr {
   }
  
   h1 {
-    padding: 2em 1.5em;
+    padding: 2em 2.2em;
   }
 
   #Grid-C {
@@ -339,6 +386,7 @@ hr {
 
   .order--item {
     height:400px;
+    margin-left: -4em;
   }
 
   .information-area {

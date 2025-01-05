@@ -17,7 +17,7 @@ export default function Order({name, valor, price, id}) {
              <h4 className='plate-name'>{name}</h4>
              <div className='price-information'>
                 <p className='timesOrder'>{valor}x</p>
-                <p className='fix-price'><span className='fix-space'>@$ {price}</span>  <br /> <br />
+                <p className='fix-price'><span className='fix-space'>@$ {price.toFixed(2)}</span>  <br /> <br />
                 <span className='update-Value'>$ {totalPrice.toFixed(2)}</span> </p>
              </div>
           </div>
