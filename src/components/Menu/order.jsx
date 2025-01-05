@@ -1,6 +1,6 @@
 import deleteIcon from '../images/icon-remove-item.svg';
 import { useContext } from 'react';
-import { GobalContext } from '../../../context';
+import { GlobalContext } from '../../context';
 
 export default function Order({name, valor, price, id}) {
 
@@ -8,7 +8,7 @@ export default function Order({name, valor, price, id}) {
   const totalPrice = valor * price ; 
  
   // global state 
-  const {RemovePlate} = useContext(GobalContext);
+  const {RemovePlate} = useContext(GlobalContext);
 
     return (
         <>

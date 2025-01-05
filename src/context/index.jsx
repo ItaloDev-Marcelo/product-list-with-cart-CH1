@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import data from '../data/data.json'
 // create the context
-export const GobalContext = createContext(null);
+export const GlobalContext = createContext(null);
 
 //create the global state that receipe component as a children
 
@@ -76,11 +76,9 @@ const RemovePlate = (myId) => {
   )
 } 
 
-
-
     return (
-       <GobalContext.Provider value={{objData, hundleDown, hundleUp,
-      checkId, RemovePlate, setObjData}} >{children}</GobalContext.Provider>) 
+       <GlobalContext.Provider value={{objData, hundleDown, hundleUp,
+      checkId, RemovePlate, setObjData}} >{children}</GlobalContext.Provider>) 
 }
 
 

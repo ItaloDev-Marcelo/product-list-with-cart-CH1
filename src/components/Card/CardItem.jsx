@@ -1,13 +1,13 @@
-import cart from './images/icon-add-to-cart.svg';
-import addToCart from './images/icon-increment-quantity.svg';
-import removeToCart from './images/icon-decrement-quantity.svg';
+import cart from '../images/icon-add-to-cart.svg';
+import addToCart from '../images/icon-increment-quantity.svg';
+import removeToCart from '../images/icon-decrement-quantity.svg';
 import { useContext} from 'react'
-import { GobalContext } from '../../context';
+import { GlobalContext } from '../../context';
 
 export default function CartItem({image,name,category,price, id, valor, openState}) {
 
   
-  const {checkId, hundleUp, hundleDown} = useContext(GobalContext)
+  const {checkId, hundleUp, hundleDown} = useContext(GlobalContext)
     
 
     return (
@@ -37,11 +37,11 @@ export default function CartItem({image,name,category,price, id, valor, openStat
 
               <button className="Add-to-cart btn" onClick={() =>  hundleUp(id)}>
                <div className='cirlce'>
-               <img src={addToCart} alt="" />
+               <img src={addToCart} alt=""  />
                </div>
               </button>
              </div>
-             : <button className="btn-order" onClick={() => checkId(id) }> <img src={cart} alt="" /> <span className='txt-space'>Add to cart</span> </button>
+             : <button className="btn-order" onClick={() => checkId(id) }> <img src={cart} alt="" style={{width: 21, height: 20}} /> <span className='txt-space'>Add to cart</span> </button>
               
           }
           </div>

@@ -1,13 +1,29 @@
-import CartItem from './data/components/CardItem';
+import CartItem from './components/Card/CardItem';
 import './App.css';
-import MenuOrder from './data/components/Menu/Menu';
-import { useContext} from 'react';
-import { GobalContext } from './context';
+import MenuOrder from './components/Menu/Menu' ;
+import { useContext, useState} from 'react';
+import { GlobalContext } from './context';
 function App() {
 
   // global state 
-  const {objData} = useContext(GobalContext)
+  const {objData} = useContext(GlobalContext)
+
+  const [selectedWidth, SetSelectedWidth] = useState()
   
+  function update() {
+    
+    SetSelectedWidth(window.innerWidth)
+
+    if(selectedWidth <= 500) {
+       console.log('Mobile')
+    }else if(selectedWidth <= 768) {
+      console.log('Tablet')
+    }else {
+      console.log('Desktop')
+    }
+  }
+
+  window.addEventListener('resize', update);
 
   return (
     <main>
@@ -20,7 +36,8 @@ function App() {
         /*destructor in an object*/ 
         const {name, image, category,price, id, valor, openState} = dataItem
          return (
-            <CartItem name={name}  image={image.mobile} id={id}
+            <CartItem name={name}  image={ selectedWidth <= 600  ?
+              image.mobile :  selectedWidth <= 900 ? image.tablet : image.desktop } id={id}
              category={category} price={price} 
               valor={valor} openState={openState} />
          ) 

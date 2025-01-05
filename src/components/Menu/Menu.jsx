@@ -1,14 +1,14 @@
 import cake from '../images/illustration-empty-cart.svg';
 import Order from './order';
 import { useContext } from 'react'
-import { GobalContext } from '../../../context';
+import { GlobalContext } from '../../context';
 
 //test
 
 export default function MenuOrder() {
 
      // global state
-     const {objData} = useContext(GobalContext);
+     const {objData} = useContext(GlobalContext);
     
      // filter number of items
      const numOfItensinCart = objData.filter(item => item.openState === true).
@@ -39,8 +39,6 @@ export default function MenuOrder() {
       ) 
    })
 
-  
-
     return (
         <>
         <article id="Menu">
@@ -48,7 +46,6 @@ export default function MenuOrder() {
            <h3 id="menu-title">Your Cart ({numOfItensinCart}) </h3>
            {
             responseData <= 0 ? <>
-           
            <div id='center-content'>
            <div id="order-image-empty">
                <img src={cake} alt='' />
@@ -61,8 +58,7 @@ export default function MenuOrder() {
            <button >Confirm Order</button>
          </div>
             </div>)
-           }
-           
+           }  
            </div>
         </article>
         </>
