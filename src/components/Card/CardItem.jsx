@@ -13,7 +13,7 @@ export default function CartItem({image,name,category,price, id, valor, openStat
     return (
         <article className="order--item"  >
           <div className={openState ? 'order--image active' : 'order--image'}>
-              <img src={image} alt="" />
+              <img src={image} alt='' />
            <div>
 
            <div className='float-center'>   
