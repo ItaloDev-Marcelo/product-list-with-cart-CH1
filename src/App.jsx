@@ -36,7 +36,7 @@ function App() {
         /*destructor in an object*/ 
         const {name, image, category,price, id, valor, openState} = dataItem
          return (
-            <CartItem name={name}  image={ selectedWidth >= 330 && selectedWidth <= 600  ?
+            <CartItem name={name}  image={ selectedWidth >= 300 && selectedWidth <= 600  ?
               image.mobile : selectedWidth > 600  &&  selectedWidth <= 900 ? image.tablet : image.desktop } id={id}
               category={category} price={price} 
               valor={valor} openState={openState} />
