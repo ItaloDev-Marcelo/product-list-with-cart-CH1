@@ -285,6 +285,15 @@ hr {
   color: #fff;
   font-weight: 700;
 }
+
+
+.final-bill {
+  display: none;
+}
+
+.final-bill.active {
+  display: block;
+}
 /*mobile*/
 
 @media (min-width:601px)  {

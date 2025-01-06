@@ -1,7 +1,9 @@
 import cake from '../images/illustration-empty-cart.svg';
 import Carbon from '../images/icon-carbon-neutral.svg';
+import confirmIcon from '../images/icon-order-confirmed.svg';
 import Order from './order';
-import { useContext } from 'react'
+import Bill from '../Bill/Bill';
+import { useContext} from 'react'
 import { GlobalContext } from '../../context';
 
 //test
@@ -9,7 +11,8 @@ import { GlobalContext } from '../../context';
 export default function MenuOrder() {
 
      // global state
-     const {objData} = useContext(GlobalContext);
+     const {objData,  openFinal, confirmOrder,  resetOrder} = useContext(GlobalContext);
+
     
      // filter number of items
      const numOfItensinCart = objData.filter(item => item.openState === true).
@@ -40,6 +43,19 @@ export default function MenuOrder() {
       ) 
    })
 
+   const BillItem =   responseData.map(data => 
+      {
+      const {name,valor,price} = data;
+      return (
+         <>
+         <Bill name={name} valor={valor} price={price} thumbnail={data.image.thumbnail}/>
+         </>
+      ) 
+   })
+
+
+   
+
     return (
         <>
         <article id="Menu">
@@ -63,13 +79,30 @@ export default function MenuOrder() {
               <img src={Carbon} alt='tree' />
               <h4 id="carbon-txt">This is a <strong>carbon-neutral</strong> delivery </h4>
            </div>
-           <button id="submit-form">Confirm Order</button>
+           <button id="submit-form" onClick={() => confirmOrder()}>Confirm Order</button>
 
          </div>
             </div>)
            }  
            </div>
         </article>
+
+         <section className={openFinal ? 'final-bill active' : 'final-bill'}>
+                    <img src={confirmIcon} alt=''/>
+                    <h5>Order confirmed</h5>
+                    <p>We hope you enjoy your food!</p>
+
+                    <div id='order-selected-items'>
+                       {BillItem}
+                       <div className='row'>
+                       <h5> Order Total</h5>
+                       <p className='product-price'>$ {totalOrderPrice.toFixed(2)}</p>
+                      </div>
+                    </div>
+                    
+                    <button id="submit-form" onClick={() => resetOrder()} >Start New Order</button>
+
+        </section>
         </>
     )
 }

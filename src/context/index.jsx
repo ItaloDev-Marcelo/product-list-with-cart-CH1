@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import data from '../data/data.json'
+import ResetData  from '../data/resetData.json'
 // create the context
 export const GlobalContext = createContext(null);
 
@@ -9,7 +10,9 @@ function GlobalState({children}) {
 
 // json file state 
   
-const [objData, setObjData] = useState(data)
+const [objData, setObjData] = useState(data);
+
+const [openFinal, setOpenFinal] = useState(false);
 
 // ativa e desativa menu de order
   const  checkId = (myId) => {
@@ -76,9 +79,20 @@ const RemovePlate = (myId) => {
   )
 } 
 
+
+const confirmOrder = ()  => {
+  setOpenFinal(!openFinal)
+}
+
+const resetOrder = ()  => {
+  setOpenFinal(!openFinal)  
+  setObjData(ResetData) 
+}
+
+
     return (
        <GlobalContext.Provider value={{objData, hundleDown, hundleUp,
-      checkId, RemovePlate, setObjData}} >{children}</GlobalContext.Provider>) 
+      checkId, RemovePlate, setObjData, openFinal, confirmOrder,  resetOrder}} >{children}</GlobalContext.Provider>) 
 }
 
 
