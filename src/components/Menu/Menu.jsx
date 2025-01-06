@@ -99,7 +99,6 @@ export default function MenuOrder() {
                        <p className='product-price'>$ {totalOrderPrice.toFixed(2)}</p>
                       </div>
                     </div>
-                    
                     <button id="submit-form" onClick={() => resetOrder()} >Start New Order</button>
 
         </section>

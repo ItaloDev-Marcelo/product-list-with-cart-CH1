@@ -1,11 +1,15 @@
 import deleteIcon from '../images/icon-remove-item.svg';
+import deleteCopy from '../images/icon-remove-item.svg';
 import { useContext } from 'react';
 import { GlobalContext } from '../../context';
 
 export default function Order({name, valor, price, id}) {
 
   // totalPrice
-  const totalPrice = valor * price ; 
+  const totalPrice = valor * price ;
+
+  // verificar item
+  console.log(deleteCopy)
  
   // global state 
   const {RemovePlate} = useContext(GlobalContext);
