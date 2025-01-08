@@ -37,6 +37,8 @@ main {
   align-content: center;
 }
 
+
+
 h1 {
   align-self: flex-start;
   padding: 2em 2.5em;
@@ -295,10 +297,35 @@ hr {
 
 .final-bill.active {
   display: block;
+  position: absolute;
+  top: 8em;
+  left: 0;
+  width: 100%;
+  padding: 3em 4em;
+  border-radius: 7px 7px  0 0;
+  border: 1px solid red;
+  background-color: #fff;
 }
 
 
+#final-confirmation-Info {
+  padding-bottom: 2em;
+}
 
+#final-confirmation-Info #order-confimed-txt {
+  font-size: 3em;
+  width: 75%;
+}
+
+#final-confirmation-Info  #enjoy-txt {
+  font-weight: 500;
+  color: var(--Rose-50);
+}
+
+
+.card--bill-left {
+  display: flex;
+}
 /*mobile*/
 
 @media (min-width:601px)  {

@@ -6,7 +6,7 @@ import { GlobalContext } from './context';
 function App() {
 
   // global state 
-  const {objData} = useContext(GlobalContext)
+  const {objData, openFinal} = useContext(GlobalContext)
 
   const [selectedWidth, SetSelectedWidth] = useState()
   
@@ -25,10 +25,12 @@ function App() {
 
   window.addEventListener('resize', update);
 
+
+
   return (
     <main>
     <h1>Desserts</h1>
-    <div className='container'>
+    <div className='container' >
       
     <div id="Grid-C">
     {

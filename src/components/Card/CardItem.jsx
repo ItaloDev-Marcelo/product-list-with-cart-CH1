@@ -7,11 +7,14 @@ import { GlobalContext } from '../../context';
 export default function CartItem({image,name,category,price, id, valor, openState}) {
 
   
-  const {checkId, hundleUp, hundleDown} = useContext(GlobalContext)
+  const {checkId, hundleUp, hundleDown, openFinal} = useContext(GlobalContext)
     
 
+  
+   const closeOrNot = !openFinal ? 'block' : 'none'
+
     return (
-        <article className="order--item"  >
+        <article className="order--item"  style={{display: closeOrNot}} >
           <div className={openState ? 'order--image active' : 'order--image'}>
               <img src={image} alt='' />
            <div>

@@ -56,9 +56,10 @@ export default function MenuOrder() {
 
    
 
+   const closeOrNot = !openFinal ? 'flex' : 'none'
     return (
         <>
-        <article id="Menu">
+        <article id="Menu" style={{display: closeOrNot}}>
            <div>
            <h3 id="menu-title">Your Cart ({numOfItensinCart}) </h3>
            {
@@ -88,10 +89,11 @@ export default function MenuOrder() {
         </article>
 
          <section className={openFinal ? 'final-bill active' : 'final-bill'}>
-                    <img src={confirmIcon} alt=''/>
-                    <h5>Order confirmed</h5>
-                    <p>We hope you enjoy your food!</p>
-
+                   <section id='final-confirmation-Info'>
+                   <img src={confirmIcon} alt=''/>
+                    <h5 id='order-confimed-txt'>Order confirmed</h5>
+                    <p id='enjoy-txt'>We hope you enjoy your food!</p>
+                   </section>
                     <div id='order-selected-items'>
                        {BillItem}
                        <div className='row'>
@@ -100,7 +102,7 @@ export default function MenuOrder() {
                       </div>
                     </div>
                     <button id="submit-form" onClick={() => resetOrder()} >Start New Order</button>
-
+                  
         </section>
         </>
     )
