@@ -303,7 +303,6 @@ hr {
   width: 100%;
   padding: 3em 4em;
   border-radius: 7px 7px  0 0;
-  border: 1px solid red;
   background-color: #fff;
 }
 
@@ -319,12 +318,55 @@ hr {
 
 #final-confirmation-Info  #enjoy-txt {
   font-weight: 500;
-  color: var(--Rose-50);
+  color: var(--Rose-400);
+}
+
+.bill-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 3em 1.2em 1em;
+}
+
+.card--bill-left > img {
+  width: 55px;
+  margin-right: 1.2em;
+  border-radius: 7px;
+}
+
+.bill-row{
+  position: relative;
+  left: -2em;
+}
+
+.bill-row  > p{
+  display: flex;
+}
+
+.bill-plate-name {
+  margin-bottom: 1em;
+}
+
+.bill-row  .orders-times {
+  margin-right: 1em;
+}
+
+#order-selected-items  {
+  background-color: var(--Rose-50);
+  border-radius: 7px;
 }
 
 
-.card--bill-left {
+.row-price {
   display: flex;
+  justify-content: space-between;
+  padding: 2em 1em;
+}
+
+#submit-form {
+  width: 100%;
+  margin-top: 2em;
 }
 /*mobile*/
 

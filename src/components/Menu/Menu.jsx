@@ -96,9 +96,9 @@ export default function MenuOrder() {
                    </section>
                     <div id='order-selected-items'>
                        {BillItem}
-                       <div className='row'>
+                       <div className='row-price'>
                        <h5> Order Total</h5>
-                       <p className='product-price'>$ {totalOrderPrice.toFixed(2)}</p>
+                       <p className='product-price bold'>$ {totalOrderPrice.toFixed(2)}</p>
                       </div>
                     </div>
                     <button id="submit-form" onClick={() => resetOrder()} >Start New Order</button>
