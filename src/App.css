@@ -325,13 +325,13 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 1em 3em 1.2em 1em;
+  justify-content: center;
+  /*  padding: 1em 3em 1.2em 2em;*/
 }
 
 .card--bill-left > img {
-  width: 55px;
-  margin-right: 1.2em;
+  width: 45px;
+  margin-right: 2em;
   border-radius: 7px;
 }
 
@@ -345,24 +345,55 @@ hr {
 }
 
 .bill-plate-name {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 .bill-row  .orders-times {
   margin-right: 1em;
+  font-weight: 700;
+  color: var(--Red);
 }
 
 #order-selected-items  {
   background-color: var(--Rose-50);
   border-radius: 7px;
+  padding: 2em 2em;
+}
+
+.fix-order-value {
+  font-weight: 400;
+  color: var(--Rose-400);
+}
+
+.bill-total-price strong {
+  font-size: 1.2em;
+  color:var(--Rose-900);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  min-width: 290px;
+  width: 298px;
 }
 
 
 .row-price {
   display: flex;
   justify-content: space-between;
-  padding: 2em 1em;
+  align-items: center;
+  text-align: center;
+  padding:1.5em 0;
 }
+
+
+.row-price-txt {
+  font-weight: 500;
+  color: var(--Rose-400);
+}
+
 
 #submit-form {
   width: 100%;

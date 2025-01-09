@@ -54,9 +54,8 @@ export default function MenuOrder() {
    })
 
 
-   
-
    const closeOrNot = !openFinal ? 'flex' : 'none'
+
     return (
         <>
         <article id="Menu" style={{display: closeOrNot}}>
@@ -97,8 +96,8 @@ export default function MenuOrder() {
                     <div id='order-selected-items'>
                        {BillItem}
                        <div className='row-price'>
-                       <h5> Order Total</h5>
-                       <p className='product-price bold'>$ {totalOrderPrice.toFixed(2)}</p>
+                       <h5 className='row-price-txt'> Order Total</h5>
+                       <p className='product-price'><strong>${totalOrderPrice.toFixed(2)}</strong> </p>
                       </div>
                     </div>
                     <button id="submit-form" onClick={() => resetOrder()} >Start New Order</button>
