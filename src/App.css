@@ -337,7 +337,7 @@ hr {
 
 .bill-row{
   position: relative;
-  left: -2em;
+  left: -.8em;
 }
 
 .bill-row  > p{
@@ -385,7 +385,8 @@ hr {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding:1.5em 0;
+  padding:1.5em 1em;
+  
 }
 
 
