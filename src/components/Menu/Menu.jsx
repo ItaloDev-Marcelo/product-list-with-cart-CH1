@@ -54,11 +54,11 @@ export default function MenuOrder() {
    })
 
 
-   const closeOrNot = !openFinal ? 'flex' : 'none'
+   const closeOrNot = !openFinal
 
     return (
         <>
-        <article id="Menu" style={{display: closeOrNot}}>
+        <article id="Menu" className={closeOrNot ? 'card' : 'card off'}>
            <div>
            <h3 id="menu-title">Your Cart ({numOfItensinCart}) </h3>
            {
@@ -86,7 +86,6 @@ export default function MenuOrder() {
            }  
            </div>
         </article>
-
          <section className={openFinal ? 'final-bill active' : 'final-bill'}>
                    <section id='final-confirmation-Info'>
                    <img src={confirmIcon} alt=''/>

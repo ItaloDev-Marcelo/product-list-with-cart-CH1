@@ -11,10 +11,10 @@ export default function CartItem({image,name,category,price, id, valor, openStat
     
 
   
-   const closeOrNot = !openFinal ? 'block' : 'none'
+   const closeOrNot = !openFinal 
 
     return (
-        <article className="order--item"  style={{display: closeOrNot}} >
+        <article className={closeOrNot ? "order--item" : "order--item off"}   >
           <div className={openState ? 'order--image active' : 'order--image'}>
               <img src={image} alt='' />
            <div>
