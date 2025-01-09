@@ -301,7 +301,7 @@ hr {
   top: 8em;
   left: 0;
   width: 100%;
-  padding: 3em 4em;
+  padding: 3em 2em;
   border-radius: 7px 7px  0 0;
   background-color: #fff;
 }
@@ -357,7 +357,7 @@ hr {
 #order-selected-items  {
   background-color: var(--Rose-50);
   border-radius: 7px;
-  padding: 2em 2em;
+  padding: 2em .5em;
 }
 
 .fix-order-value {
