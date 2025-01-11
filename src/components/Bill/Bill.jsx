@@ -16,8 +16,8 @@ export default function Bill({thumbnail, name, price, valor}) {
                   <span className="fix-order-value">@ ${price}</span> </p>
              </div>
             </div>
-            <p className="bill-total-price"> <strong>${data.toFixed(2)}</strong> </p>
             </div>
+            <p className="bill-total-price"> <strong>${data.toFixed(2)}</strong> </p>
         </article>
         <hr></hr>
         </>

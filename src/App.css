@@ -340,11 +340,13 @@ hr {
 
 #final-confirmation-Info {
   padding-bottom: 2em;
+  border: 1px solid red;
 }
 
 #final-confirmation-Info #order-confimed-txt {
   font-size: 3em;
   width: 75%;
+  
 }
 
 #final-confirmation-Info  #enjoy-txt {
@@ -356,7 +358,8 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center;*/
+  border: 1px solid saddlebrown;
   /*  padding: 1em 3em 1.2em 2em;*/
 }
 
@@ -388,7 +391,9 @@ hr {
 #order-selected-items  {
   background-color: var(--Rose-50);
   border-radius: 7px;
-  padding: 2em .5em;
+  padding: 2em 2em;
+  
+  border: 1px solid saddlebrown;
 }
 
 .fix-order-value {
@@ -404,10 +409,11 @@ hr {
 .content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1em;
   min-width: 290px;
   width: 298px;
+  border: 1px solid pink;
 }
 
 
@@ -416,8 +422,8 @@ hr {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding:1.5em 1em;
-  
+  padding:1.5em 1.1em;
+  border: 1px solid purple;
 }
 
 
