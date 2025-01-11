@@ -86,6 +86,7 @@ export default function MenuOrder() {
            }  
            </div>
         </article>
+        <div className={openFinal ? 'shadow active' : null}></div>
          <section className={openFinal ? 'final-bill active' : 'final-bill'}>
                    <section id='final-confirmation-Info'>
                    <img src={confirmIcon} alt=''/>
