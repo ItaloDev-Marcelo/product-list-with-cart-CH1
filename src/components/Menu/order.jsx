@@ -1,5 +1,4 @@
 import deleteIcon from '../images/icon-remove-item.svg';
-import deleteCopy from '../images/icon-remove-item.svg';
 import { useContext } from 'react';
 import { GlobalContext } from '../../context';
 

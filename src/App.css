@@ -25,18 +25,6 @@ body {
   background-color: var(--Rose-100);
 }
 
-
-body  .shadow.active{
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100vw; 
-  height: 100vh; 
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 1;
-}
-
-
 button {
   border: none;
   cursor: pointer;
@@ -49,7 +37,17 @@ main {
   align-content: center;
 }
 
+/*shadow effect*/
 
+body .shadow.active{
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
 
 h1 {
   align-self: flex-start;
@@ -57,11 +55,15 @@ h1 {
   font-size: 2em;
 }
 
+/*grid*/
+
 #Grid-C {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+
+/*card card--item */
 
 .order--item {
   display: block;
@@ -79,7 +81,6 @@ h1 {
 
 .order--image.active {
   position: relative;
-  border:2px solid red;
   border-radius: 11px;
   height: 211px;
 }
@@ -89,7 +90,6 @@ h1 {
   max-width: 100%;
   border-radius: 10px;
 }
-
 
 .float-center { 
   position: absolute;
@@ -109,6 +109,7 @@ h1 {
   border: 1px solid gray;
 }
 
+/*btn of card--item*/
 
 .btn-order .txt-space {
   padding-left: 1em;
@@ -179,9 +180,6 @@ h1 {
    margin-top: .2em;
 }
 
-
-
-
 .card {
   display: block; 
 }
@@ -190,8 +188,7 @@ h1 {
   display: none;
 }
 
-
-
+/* menu */
 #Menu {
   width: 324px;
   min-height: 250px;
@@ -216,13 +213,13 @@ h1 {
   margin-bottom: 1em;
 }
 
+/*order-item list components*/
+
 .order-item {
   display: flex;
   justify-content: space-between;
   padding: 0.2em 0;
 }
-
-
 
 .plate-name {
   font-weight: 600;
@@ -281,6 +278,8 @@ hr {
   border: #7e666444 1px solid;
 }
 
+/*final price of menu*/
+
 #not-show {
   margin-top: 1.5em;
 }
@@ -319,6 +318,7 @@ hr {
   font-weight: 700;
 }
 
+/*confirmed bill */
 
 .final-bill {
   display: none;
@@ -336,15 +336,13 @@ hr {
   background-color: #fff;
 }
 
-
 #final-confirmation-Info {
   padding-bottom: 2em;
 }
 
 #final-confirmation-Info #order-confimed-txt {
   font-size: 3em;
-  width: 75%;
-  
+  width: 75%;  
 }
 
 #final-confirmation-Info  #enjoy-txt {
@@ -356,9 +354,9 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: center;*/
-  /*  padding: 1em 3em 1.2em 2em;*/
 }
+
+/*card--bil img*/
 
 .card--bill-left > img {
   width: 45px;
@@ -388,8 +386,7 @@ hr {
 #order-selected-items  {
   background-color: var(--Rose-50);
   border-radius: 7px;
-  padding: 2em 2em;
-  
+  padding: 2em 2em; 
 }
 
 .fix-order-value {
@@ -431,6 +428,8 @@ hr {
   width: 100%;
   margin-top: 2em;
 }
+
+
 /*mobile*/
 
 @media (min-width:601px)  {
@@ -466,9 +465,8 @@ hr {
     margin: 2em 0;
   }
 
- 
-}
 
+}
 /* tablet*/
 @media (min-width:800px) {
   #Grid-C {
@@ -491,10 +489,20 @@ hr {
   .final-bill.active {
     display: block;
     position: absolute;
+    top: 5em;
+    left: 15em;
+    width: 555px;
+  }
+
+  /* 
+   .final-bill.active {
+    display: block;
+    position: absolute;
     top: 20em;
     left: 35em;
     width: 555px;
   }
+  */
   
 
   .content {
@@ -504,7 +512,6 @@ hr {
     padding: 1em;
     min-width: auto;
     width: 440px;
-    border: 1px solid aquamarine;
   }
   
 
@@ -513,7 +520,6 @@ hr {
   }
   
 }
-
 
 @media (min-width:900px) {
   #Grid-C {
@@ -528,17 +534,54 @@ hr {
 
 }
 
+@media (min-width:960px) {
+  #Grid-C {
+    gap: 55px 57px;
+  }
+
+  
+  h1 {
+    margin-left: 1.5em;
+    font-size: 2.2em;
+  }
+
+}
+
 /*tablet to desktop*/
 
 @media (min-width:1024px) {
   h1 {
-    padding: 2em 5em;
+    
+    margin-left: 2.2em;
     font-size: 2.2em;
   }
+
+  .final-bill.active {
+    top: 14em;
+  }
+
 }
 
-
 @media (min-width:1200px) {
+  h1 {
+    margin-left: 5em;
+    font-size: 2.5em;
+  }
+
+
+  .final-bill.active {
+    top: 15em;
+    left: 24em;
+  }
+
+}
+ 
+@media (min-width:1280px) {
+
+  h1 {
+    margin-left: -1.4em;
+    font-size: 2.5em;
+  }
  
   .container {
     display: flex;
@@ -551,9 +594,6 @@ hr {
     margin-left: -3em;
   }
  
-  h1 {
-    padding: 2em 2.2em;
-  }
 
   #Grid-C {
     display: grid;
@@ -590,6 +630,76 @@ hr {
     height: 1;
   }
 }
+
+@media (min-width:1336px)  {
+   
+  h1 {
+    margin-left: -0.5em;
+    font-size: 2.5em;
+  }
+ 
+}
+
+@media (min-width:1440px)  {
+   
+  h1 {
+    margin-left: .5em;
+    font-size: 2.5em;
+  }
+
+  .final-bill.active {
+    top: 22em;
+    left: 17em;
+  }
+
+ 
+}
+
+@media (min-width:1600px)  {
+   
+  h1 {
+    margin-left: 2.7em;
+    font-size: 2.5em;
+  }
+
+  .final-bill.active {
+    top: 25em;
+    left: 20em;
+  }
+
+ 
+}
+
+
+@media (min-width:1680px)  {
+   
+  h1 {
+    margin-left: 4.2em;
+  }
+
+  .final-bill.active {
+    left: 24em;
+  }
+
+ 
+}
+
+
+@media (min-width:1920px)  {
+   
+  h1 {
+    margin-left: 7.4em;
+  }
+
+  .final-bill.active {
+    left: 35em;
+  }
+
+ 
+}
+
+
+
 
 /*
 @media (min-width:601px)  {

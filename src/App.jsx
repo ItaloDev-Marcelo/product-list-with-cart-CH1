@@ -11,27 +11,15 @@ function App() {
   const [selectedWidth, SetSelectedWidth] = useState()
   
   function update() {
-    
     SetSelectedWidth(window.innerWidth)
-
-    if(selectedWidth <= 500) {
-       console.log('Mobile')
-    }else if(selectedWidth <= 768) {
-      console.log('Tablet')
-    }else {
-      console.log('Desktop')
-    }
   }
 
   window.addEventListener('resize', update);
-
-
 
   return (
     <main>
     <h1>Desserts</h1>
     <div className='container' >
-      
     <div id="Grid-C">
     {
       objData.map(dataItem => {
