@@ -318,6 +318,10 @@ hr {
   font-weight: 700;
 }
 
+#submit-form:hover {
+  background-color: #952c0c;
+}
+
 /*confirmed bill */
 
 .final-bill {
@@ -395,7 +399,7 @@ hr {
 }
 
 .bill-total-price strong {
-  font-size: 1.2em;
+  font-size: 1em;
   color:var(--Rose-900);
 }
 
