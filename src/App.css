@@ -26,14 +26,13 @@ body {
 }
 
 
-.shadow.active{
+body  .shadow.active{
   position: fixed; 
   top: 0;
   left: 0;
   width: 100vw; 
   height: 100vh; 
   background-color: rgba(0, 0, 0, 0.5); 
-
   z-index: 1;
 }
 
@@ -340,7 +339,6 @@ hr {
 
 #final-confirmation-Info {
   padding-bottom: 2em;
-  border: 1px solid red;
 }
 
 #final-confirmation-Info #order-confimed-txt {
@@ -359,7 +357,6 @@ hr {
   flex-direction: row;
   align-items: center;
   /* justify-content: center;*/
-  border: 1px solid saddlebrown;
   /*  padding: 1em 3em 1.2em 2em;*/
 }
 
@@ -393,7 +390,6 @@ hr {
   border-radius: 7px;
   padding: 2em 2em;
   
-  border: 1px solid saddlebrown;
 }
 
 .fix-order-value {
@@ -413,7 +409,6 @@ hr {
   padding: 1em;
   min-width: 290px;
   width: 298px;
-  border: 1px solid pink;
 }
 
 
@@ -423,7 +418,6 @@ hr {
   align-items: center;
   text-align: center;
   padding:1.5em 1.1em;
-  border: 1px solid purple;
 }
 
 
