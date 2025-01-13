@@ -49,6 +49,8 @@ body .shadow.active{
   z-index: 1;
 }
 
+
+
 h1 {
   align-self: flex-start;
   padding: 2em 2.5em;
@@ -439,7 +441,35 @@ hr {
 
 /*mobile*/
 
-@media (min-width:601px)  {
+
+@media (min-width:445px) {
+ h1 {
+  margin-left: -.7em;
+ }
+}
+
+@media (min-width:500px) {
+  h1 {
+   margin-left: 1em;
+  }
+ }
+
+
+@media (min-width:575px) {
+  h1 {
+   margin-left: 1.9em;
+  }
+}
+
+
+/*definir uma correcao na  leyout dos items da tela*/
+
+@media (min-width:600px) {
+
+}
+
+
+@media (min-width:700px)  {
   #Grid-C {
     display: grid;
     grid-template-columns: 1fr 1fr;
