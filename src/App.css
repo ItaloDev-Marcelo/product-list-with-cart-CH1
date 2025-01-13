@@ -358,6 +358,7 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: -1em;
 }
 
 /*card--bil img*/
@@ -401,6 +402,7 @@ hr {
 .bill-total-price strong {
   font-size: 1em;
   color:var(--Rose-900);
+  margin-left: -1.1em;
 }
 
 .content {
@@ -408,7 +410,7 @@ hr {
   align-items: center;
   justify-content: flex-start;
   padding: 1em;
-  min-width: 290px;
+  min-width: 240px;
   width: 298px;
 }
 
@@ -687,7 +689,6 @@ hr {
 
  
 }
-
 
 @media (min-width:1920px)  {
    
