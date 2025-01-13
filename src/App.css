@@ -52,6 +52,7 @@ body .shadow.active{
 h1 {
   align-self: flex-start;
   padding: 2em 2.5em;
+  margin-left: -1.2em;
   font-size: 2em;
 }
 
