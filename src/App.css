@@ -463,7 +463,6 @@ hr {
 .order--image.active {
   position: relative;
   border-radius: 11px; 
-  border: 1px solid rebeccapurple;
   height: 260px;
 }
 
