@@ -7,7 +7,7 @@
 
 
 :root {
---Red: hsl(14, 86%, 42%);
+--Red: hwb(14 6% 22%);
 --Green: hsl(159, 69%, 38%);
 --Rose-50: hsl(20, 50%, 98%);
 --Rose-100: hsl(13, 31%, 94%);
@@ -86,6 +86,7 @@ h1 {
   position: relative;
   border-radius: 11px;
   height: 211px;
+  border: 1px solid #c73a0f;
 }
 
 
