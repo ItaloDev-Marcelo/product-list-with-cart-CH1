@@ -27,7 +27,7 @@ function App() {
         const {name, image, category,price, id, valor, openState} = dataItem
          return (
             <CartItem name={name}  image={ selectedWidth <= 400 || selectedWidth <= 600  ?
-              image.mobile : selectedWidth >= 678  ||  selectedWidth <= 900 ? image.tablet : image.desktop } id={id}
+              image.mobile : selectedWidth === 700  ||  selectedWidth <= 900 ? image.tablet : image.desktop } id={id}
               category={category} price={price} 
               valor={valor} openState={openState} />
          ) 
