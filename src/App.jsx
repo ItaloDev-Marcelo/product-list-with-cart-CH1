@@ -1,12 +1,13 @@
 import CartItem from './components/Card/CardItem';
 import './App.css';
+import './responsive.css';
 import MenuOrder from './components/Menu/Menu' ;
 import { useContext, useState} from 'react';
 import { GlobalContext } from './context';
 function App() {
 
   // global state 
-  const {objData, openFinal} = useContext(GlobalContext)
+  const {objData} = useContext(GlobalContext)
 
   const [selectedWidth, SetSelectedWidth] = useState()
   
@@ -18,9 +19,9 @@ function App() {
 
   return (
     <main>
-    <h1>Desserts</h1>
-    <div className='container' >
+    <div className='container' >    
     <div id="Grid-C">
+    <h1>Desserts</h1>
     {
       objData.map(dataItem => {
         /*destructor in an object*/ 

@@ -19,10 +19,25 @@
 
 /*- Weights: 400, 600, 700*/
 
+@keyframes easyLoading {
+    0%{
+      opacity: 0;
+    }
+
+    50% {
+      opacity: .7;
+    }
+
+    100% {
+     opacity: 1;
+    }
+}
+
 body {
   font-size: 1em;
   font-family: "Red Hat Text", serif;
   background-color: var(--Rose-100);
+  animation: ease-in 4s easyLoading;
 }
 
 button {
@@ -53,14 +68,18 @@ body .shadow.active{
 
 h1 {
   align-self: flex-start;
-  padding: 2em 2.5em;
-  margin-left: -1.2em;
+  position: absolute;
+  top: -3em;
+  left: .1em;
   font-size: 2em;
+
 }
 
 /*grid*/
 
 #Grid-C {
+  position: relative;
+  top: 7em;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -86,6 +105,7 @@ h1 {
   position: relative;
   border-radius: 11px;
   height: 211px;
+  border: 1px solid #c73a0f;
 }
 
 
@@ -197,9 +217,10 @@ h1 {
   min-height: 250px;
   max-height: auto;
   padding: 2em;
-  border-radius: 7px;
+  border-radius: 10px;
   background-color: #fff;
   margin-bottom: 2em;
+  margin-top: 10em;
 }
 
 #center-content {
@@ -369,7 +390,7 @@ hr {
 .card--bill-left > img {
   width: 45px;
   margin-right: 2em;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 
 .bill-row{
@@ -393,7 +414,7 @@ hr {
 
 #order-selected-items  {
   background-color: var(--Rose-50);
-  border-radius: 7px;
+  border-radius: 10px;
   padding: 2em 2em; 
 }
 
@@ -438,219 +459,3 @@ hr {
   margin-top: 2em;
 }
 
-
-/*mobile*/
-
-
-@media (min-width:445px) {
- h1 {
-  margin-left: -.7em;
- }
-}
-
-@media (min-width:500px) {
-  h1 {
-   margin-left: 1em;
-  }
-
-  
-.order--item {
-  display: block;
-  width: 400px;
-  height:390px;
-}
-
-.order--image.active {
-  position: relative;
-  border-radius: 11px; 
-  height: 260px;
-}
-
-.float-center { 
-  position: absolute;
-  top: 91%;
-  left: 30%;
-}
-
-#Menu {
-  width: 400px;
-}
-
- }
-
-@media (min-width:601px)  {
- 
-  .order--item {
-    display: block;
-    width: 400px;
-    height:550px;
-  }
-  
-
-  .order--image.active {
-    height: 397.3px;
-  }
-
-  
-  .float-center { 
-    position: absolute;
-    top: 91%;
-    left: 30%;
-  }
-  
-
-  .information-area {
-    padding-top: 1.5em;
-  }
-  
-  .information-area .title {
-    font-size: 1.2em;
-    margin-bottom: .5em;
-  }
-  
-  .information-area .price {
-     font-size: 1.2em;
-     margin-top: .4em;
-  }
-
-  #Menu {
-    width: 400px;
-  }
-
-
-  
-  
-}
-
-@media (min-width:700px)  {
-  #Grid-C {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px 55px;
-  }
-
-  .order--item {
-    display: block;
-    width: 300px;
-    height:450px;
-  }
-  
-
-  .order--image.active {
-    height: 298px;
-  }
-
-  .float-center { 
-    position: absolute;
-    top: 91%;
-    left: 25%;
-  }
-
-
-  #Menu {
-    margin-top: 2em;
-  }
-
-  .order--item, .order--item.off, .card.off {
-    display: block;
-  }
-  
-  .final-bill.active {
-    display: block;
-    position: absolute;
-    top: 20em;
-    left: 10em;
-    width: 555px;
-  }
-  
-
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1em;
-    min-width: auto;
-    width: 440px;
-  }
-  
-
-  .card--bill-left > img {
-    width: 60px;
-  }
-
-}
-
-@media (min-width:900px) {
-  .order--item {
-    display: block;
-    width: 400px;
-    height:450px;
-  }
-
-  #Menu {
-    margin-top: 7em;
-  }
-  
-
-  .order--image.active {
-    height: 383.5px;
-  }
-
-  .float-center { 
-    position: absolute;
-    top: 93%;
-    left: 30%;
-  }
-  
-  .final-bill.active {
-    display: block;
-    position: absolute;
-    top: 20em;
-    left: 15em;
-    width: 555px;
-  }
-  
-
-}
-
-
-
-/*
-@media (min-width: 1024px) {
-  
-  
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .float-center { 
-    position: absolute;
-    top: 87%;
-    left: 15%;
-  }
-
-
-  #Grid-C {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: none;
-  }
-
-
-  .order--item > .order--image img {
-    width: 253px;
-  }
-
-  .order--image.active {
-    position: relative;
-    border:2px solid red;
-    border-radius: 11px;
-    width: 253px;
-    height: 242px;
-  }
-  
-}
-
-*/
