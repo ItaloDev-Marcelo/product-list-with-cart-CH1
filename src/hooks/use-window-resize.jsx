@@ -9,8 +9,8 @@ export default function useWindowResize() {
 
    function WindowResize() {
     setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
+        width: window.visualViewport.width,
+        height: window.visualViewport.height
     })
    }
 
