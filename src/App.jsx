@@ -1,6 +1,6 @@
 import CartItem from './components/Card/CardItem';
 import './App.css';
-import './responsive.css';
+import './Responsive.css';
 import MenuOrder from './components/Menu/Menu' ;
 import { useContext} from 'react';
 import { GlobalContext } from './context';
@@ -10,6 +10,7 @@ function App() {
   // global state 
   const {objData} = useContext(GlobalContext)
   
+  // useWindowResize 
   const size = useWindowResize()
 
   console.log(size.width)
